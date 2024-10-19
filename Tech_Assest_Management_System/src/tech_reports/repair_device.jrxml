@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null"  pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ea25a0b2-4997-4878-8db3-89e6085b28ed">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM  repair]]>
+	</queryString>
+	<field name="DeCode" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Category" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Department" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EmpName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Reason" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="150" splitType="Stretch">
+			<staticText>
+				<reportElement x="195" y="0" width="202" height="30" uuid="88c3acfc-65e6-4245-83f7-301f858eb003"/>
+				<textElement>
+					<font fontName="Arial Rounded MT Bold" size="24" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[ABCD Company]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="59" width="555" height="26" uuid="5e7d08ef-2f4a-4538-a471-546562b0bdbc"/>
+				<textElement>
+					<font fontName="Arial Rounded MT Bold" size="18" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Report on Devices Undergoing  - Repair & Maintenance Handover Records]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="85" width="149" height="20" uuid="6f41349f-1821-4a67-ad04-949735aa11a1"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Report Generated Time :]]></text>
+			</staticText>
+			<textField pattern="yyyy.MM.dd G &apos;at&apos; HH:mm:ss z">
+				<reportElement x="149" y="85" width="155" height="20" uuid="f381c654-cbd1-433f-a678-011e52f65fd8"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="105" width="555" height="1" uuid="0f734b3a-59d0-4d22-9f97-56bfd2678968"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="120" width="226" height="20" uuid="be72dedc-d60e-4992-bf2a-b3338abd6615"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Note : This is a System generated Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="3" y="2" width="100" height="20" uuid="c3e17eda-e8d7-4e18-8f9a-c2456a396248"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Device Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="103" y="2" width="100" height="20" uuid="0b4c625f-6960-45a1-86d2-7542d4d1bb60"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="204" y="2" width="100" height="20" uuid="b85434cf-3851-4bfd-ae56-a214cbe5af77"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Department]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="306" y="2" width="100" height="20" uuid="2b1cebe4-0182-46dc-b246-94437945e385"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Employee Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="406" y="0" width="100" height="22" uuid="b0e07fbc-4657-4d50-9c78-a4887f5da3cc"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reason]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="3" y="0" width="100" height="20" uuid="0794e813-d015-4e8a-848f-be213f3fcec0"/>
+				<textFieldExpression><![CDATA[$F{DeCode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="103" y="0" width="100" height="20" uuid="fc2c6fcc-acb8-4096-8e9e-3ed676bad9fd"/>
+				<textFieldExpression><![CDATA[$F{Category}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="206" y="0" width="100" height="20" uuid="27bc1431-50cb-41e7-92ea-5c829c0b6304"/>
+				<textFieldExpression><![CDATA[$F{Department}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="306" y="0" width="100" height="20" uuid="d64bf389-bb31-4323-9b21-092ba59ddc6f"/>
+				<textFieldExpression><![CDATA[$F{EmpName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="406" y="0" width="100" height="20" uuid="a37eb8ea-7559-403d-bf34-e7eef41f9cf3"/>
+				<textFieldExpression><![CDATA[$F{Reason}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="381" y="25" width="74" height="20" uuid="f4051db1-42ef-44b5-b4a5-12aede029716"/>
+				<text><![CDATA[Page Number]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="455" y="25" width="100" height="20" uuid="806c34e2-6fa7-4c91-aa43-1e6610192863"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="24" width="555" height="1" uuid="b8b6b201-e08a-47d8-83cb-3373f5fbc988"/>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2d64d449-3dfa-435f-ab12-fd5dab10374e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT  *  FROM  devicemaster  WHERE Status = '3']]>
+	</queryString>
+	<field name="DeCode" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Category" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Brand" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DeCondition" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="148" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="53" width="470" height="26" uuid="abe384ce-5b6d-4e28-838d-ad91e82de89d"/>
+				<textElement>
+					<font fontName="Arial Rounded MT Bold" size="18" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Available Devices - Summary Report]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="100" width="555" height="1" uuid="6e9ffb16-9c10-4a52-8e79-f687fde76ea6"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="78" width="149" height="20" uuid="2a68ec35-94ed-4f59-a722-53d7ffbda309"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Report Generated Time :]]></text>
+			</staticText>
+			<textField pattern="yyyy.MM.dd G &apos;at&apos; HH:mm:ss z">
+				<reportElement x="149" y="78" width="155" height="20" uuid="d0d6a6f3-daca-44c8-a8bc-43271bea26cd"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="190" y="0" width="202" height="30" uuid="a84591aa-d023-4005-b441-cbf9533915f1"/>
+				<textElement>
+					<font fontName="Arial Rounded MT Bold" size="24" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[ABCD Company]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="113" width="226" height="20" uuid="13082f3b-b303-4852-8be3-48ba817a9eba"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Note : This is a System generated Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="1" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="170" y="0" width="80" height="20" uuid="43f4b52a-ba39-4692-b9f7-3ab1f7d0657c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Device Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="2" width="100" height="20" uuid="1c27f5c7-cd45-4c3c-b39e-765b72a90419"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="292" y="2" width="100" height="20" uuid="050b86da-9d90-4dbc-bac3-ac09426fac28"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Brand]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="407" y="2" width="100" height="20" uuid="02d9946c-ee12-451d-9fda-1d8c8860c362"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Device Condition]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="170" y="0" width="100" height="20" uuid="40284683-9b09-4017-971e-7d33f309a1c5"/>
+				<textFieldExpression><![CDATA[$F{DeCode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="37" y="0" width="133" height="20" uuid="4f4dda5c-dc51-42c1-8bc5-2a514694c8eb"/>
+				<textFieldExpression><![CDATA[$F{Category}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="292" y="0" width="100" height="20" uuid="27a46ac5-b82d-40ef-9acb-48c87c5b74cd"/>
+				<textFieldExpression><![CDATA[$F{Brand}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="407" y="0" width="100" height="20" uuid="33217202-3f33-465a-923a-3a04d1a14d0f"/>
+				<textFieldExpression><![CDATA[$F{DeCondition}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="61" splitType="Stretch">
+			<textField>
+				<reportElement x="455" y="41" width="100" height="20" uuid="47ba9d5a-9253-4f44-8eb3-60a697f23e8c"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="381" y="41" width="74" height="20" uuid="cb4a91eb-2b0b-4f7c-88d9-21c4600a5db8"/>
+				<text><![CDATA[Page Number]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="33" width="555" height="1" uuid="4593e116-1175-4e59-aa6e-a5d458c0c2fd"/>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="11" splitType="Stretch"/>
+	</summary>
+</jasperReport>
